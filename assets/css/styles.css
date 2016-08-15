@@ -165,7 +165,7 @@ footer {
        transition: visibility 0.5s, opacity 0.5s linear;
        visibility: visible;
    }
-    nav {z-index: 2;position:relative;}
+    nav {z-index: 2;position:absolute;}
    #i-nav{
        display: block;
        position: absolute;
@@ -234,7 +234,7 @@ footer {
         transition: visibility 0.5s, opacity 0.5s linear;
         visibility: visible;
     }
-    nav {z-index: 2;position:relative;}
+    nav {z-index: 2;position:absolute;}
     #i-nav{
         display: block;
         position: absolute;
