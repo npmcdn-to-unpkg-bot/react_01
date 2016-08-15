@@ -1,0 +1,250 @@
+/* WHOLE SITE ------------------------------------------------------------------------- */
+
+* {
+    padding:0;
+    margin:0;
+    font-family: "Arial Narrow";
+}
+#container{
+    width:100%;
+    height:100%;
+}
+#wrapper{
+    width:100%;
+    height:100%;
+}
+
+/* HEADER ------------------------------------------------------------------------- */
+#logo {
+    float: left;
+    color: #fff;
+    line-height: 140px;
+    margin-left: 50px;
+    font-family: "Arial Black";
+    font-size: 48px;
+}
+
+header {
+    width:100%;
+    height:140px;
+    background: #666;
+}
+
+/* MENU BAR ----------------------------------------------------------------------- */
+ul.menu {
+    float:right;
+    list-style: none;
+    width:auto;
+    height:140px;
+}
+li.menu{
+    display:inline;
+    float:left;
+    width:auto;
+    height:140px;
+    background:#545050;
+    border-right: #ccc solid 1px;
+
+}
+li.menu .a{
+    display: block;
+    float: left;
+    height:140px;
+    line-height: 140px;
+    padding: 0px 20px;
+    color: #fff;
+    font-family: "Arial Narrow";
+    width:inherit;
+}
+
+.a {
+    transition: background 0.5s ease;
+    background:#545050;
+    text-decoration: none;
+    font-size: x-large;
+    font-weight: bold;
+    width:inherit;
+}
+
+.a:hover {
+    text-decoration:  none;
+    background: #ff2a51;
+    width:inherit;
+}
+.active {
+    text-decoration:  none;
+    background: #ff2a51;
+    width:inherit;
+}
+
+/* MOBILE MENU ----------------------------------------------------------------------- */
+
+#i-nav {
+    display: none;
+}
+
+
+/* MAIN CONTENT ----------------------------------------------------------------------- */
+section {
+    padding: 20px;
+    padding-left: 50px;
+    display: block;
+
+}
+main {
+    display: block;
+    height:100%;
+
+}
+
+/* SCREENS ----------------------------------------------------------------------- */
+
+/* HOME SCREEN ------------ */
+#splashscreen{
+    padding:0px;
+    width: 100%;
+    height: 600px;
+    background: url('/img/dummy_image.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* CONTACT SCREEN ------------ */
+
+.map {
+    width: 600px;
+    height: 600px;
+}
+
+
+/* FOOTER ----------------------------------------------------------------------- */
+
+footer {
+    height:50px;
+    background: #545050;
+    width: 100%;
+    color: #ffffff;
+}
+/* CSS for different device screen sizes ----------------------------------------------------------------------- */
+
+/* 768 ----------------------------------------------------------------------- */
+@media (max-width: 768px){
+    header {
+        height:140px;
+
+    }
+    #logo {
+        width:100%;
+        text-align: center;
+        align-content: center;
+        margin:0;
+    }
+    /* MOBILE MENU ----------------------------------------------------------------------- */
+    /* Hide nav options ----------*/
+    .navhide {
+
+        opacity: 0;
+        transition: visibility 0.5s, opacity 0.5s linear;
+        visibility: hidden;
+    }
+    /* Show nav options using Jquery toggle class ----------*/
+   .navshow{
+       opacity: 1;
+       transition: visibility 0.5s, opacity 0.5s linear;
+       visibility: visible;
+   }
+   #i-nav{
+       display: block;
+       position: absolute;
+       right:0px;
+       top: 0px;
+       background:#ff2a51;
+       width:130px;
+       border:none;
+       color: #fff;
+       line-height: 140px;
+       text-align: center;
+       font-family: "Arial Black";
+   }
+   ul.menu {
+       width:100%;
+   }
+   ul.menu li.menu{
+       width:100%;
+       border-bottom:#ccc solid 1px;
+   }
+   ul.menu li.menu .a{
+       width:100%;
+       text-align: center;
+       padding:0px;
+       margin-bottom: 1px;
+   }
+
+}
+@media (max-width: 640px){
+   h2{
+
+   }
+   header {
+       height:80px;
+   }
+   #logo {
+       width:100%;
+       text-align: left;
+       align-content: center;
+       margin-left:5px;
+       line-height: 80px;
+       font-size: 30px;
+   }
+   /* MOBILE MENU ----------------------------------------------------------------------- */
+    /* Hide nav options ----------*/
+    .navhide {
+
+        opacity: 0;
+        transition: visibility 0.5s, opacity 0.5s linear;
+        visibility: hidden;
+    }
+    /* Show nav options using Jquery toggle class ----------*/
+    .navshow{
+        opacity: 1;
+        transition: visibility 0.5s, opacity 0.5s linear;
+        visibility: visible;
+    }
+    #i-nav{
+        display: block;
+        position: absolute;
+        right:0px;
+        top: 0px;
+        background:#ff2a51;
+        width:130px;
+        border:none;
+        color: #fff;
+        line-height: 80px;
+        text-align: center;
+        font-family: "Arial Black";
+        height:80px;
+    }
+    ul.menu {
+        width:100%;
+        height:80px;
+    }
+    ul.menu li.menu{
+        width:100%;
+        border-bottom:#ccc solid 1px;
+        line-height: 80px;
+        height:80px;
+    }
+    ul.menu li.menu .a{
+        width:100%;
+        text-align: center;
+        padding:0px;
+        margin-bottom: 1px;
+        line-height: 80px;
+        height:80px;
+    }
+}
+
+
+

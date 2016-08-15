@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="C:/webstorm_projects/react-15.3.0/build/react.min.js"></script>
+    <script src="C:/webstorm_projects/react-15.3.0/build/react-dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js">
+    </script>
+    <link rel="stylesheet" type="text/css" href="C:/webstorm_projects/react_01/css/main.css">
+
+    <title>My react page</title>
+</head>
+<body>
+    <div id="top"></div>
+    <div id="main"></div>
+    <div id="bottom"></div>
+
+
+
+    <!--HEADER------------------------------------------------------------>
+    <script type="text/babel">
+        //MyComponent
+        var Header1 = React.createClass({
+            render: function () {
+                return(
+                        <div>
+                            <img className="header-img" src="img/header-banner.png" />
+                        </div>
+                );
+            }
+        });
+        ReactDOM.render(
+                <div>
+                    <Header1 />
+                </div>,document.getElementById('top')
+        );
+    </script>
+    <!--END HEADER--------------------------------------------------------------------------------->
+
+
+
+
+
+    <!--MAIN----------------------------------------------------------------------------------------->
+    <script type="text/babel">
+        //Movie Class
+        var Movie = React.createClass({
+            render: function () {
+                return(
+                        <div>
+                            <h1>Film: {this.props.title}</h1>
+                            <h2>Genre: {this.props.genre}</h2>
+                            <p>Review: {this.props.review}</p>
+                        </div>
+                );
+            }
+        });
+        ReactDOM.render(
+                <div>
+                    <Movie title="Avatar" genre="Sci-fi" review="Great Movie" />
+                    <Movie title="Aliens" genre="Horror" review="Scary film" />
+                    <Movie title="Feel my pain" genre="Comedy" review="Funny" />
+                </div>,document.getElementById('main')
+        );
+    </script>
+    <!--END MAIN------------------------------------------------------------------------------->
+
+
+
+
+
+
+    <!--FOOTER--------------------------------------------------------------------------------->
+    <script type="text/babel">
+        //Footer Class
+        var Footer = React.createClass({
+            render: function () {
+                return(
+                        <div className="footer">
+                            <p>This is the footer</p>
+                        </div>
+                );
+            }
+        });
+        ReactDOM.render(
+                <div>
+                    <Footer />
+                    </div>,document.getElementById('bottom')
+        );
+    </script>
+    <!--END FOOTER--------------------------------------------------------------------------------->
+
+</body>
+</html>
