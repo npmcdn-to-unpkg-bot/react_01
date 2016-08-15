@@ -70,7 +70,7 @@ var Contact = React.createClass({
             <section>
                 <h2>Contact Us</h2>
                 <p>The easiest thing to do is post on our <a href="http://forum.kirupa.com">forums</a>.</p>
-                <div style={{height:'100%'}}><GoogleMap lat={-34.397} lng={150.644} /></div>
+                <div id="map-canvas"></div>
 
             </section>
 
