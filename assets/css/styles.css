@@ -44,7 +44,6 @@ li.menu{
     height:140px;
     background:#545050;
     border-right: #ccc solid 1px;
-
 }
 li.menu .a{
     display: block;
@@ -55,6 +54,7 @@ li.menu .a{
     color: #fff;
     font-family: "Arial Narrow";
     width:inherit;
+
 }
 
 .a {
@@ -64,12 +64,14 @@ li.menu .a{
     font-size: x-large;
     font-weight: bold;
     width:inherit;
+
 }
 
 .a:hover {
     text-decoration:  none;
     background: #ff2a51;
     width:inherit;
+
 }
 .active {
     text-decoration:  none;
@@ -94,6 +96,7 @@ section {
 main {
     display: block;
     height:100%;
+
 
 }
 

@@ -5,12 +5,18 @@
  * Created by Yearwood on 9.8.16.
  */
 
-$(document).ready(function () {
+$(document).ready(function(){
 
-    $('#i-nav').click(function () {
+    $('#i-nav').click(function(){
+        $('.navhide').toggleClass('navshow');
+    })
 
-        $('nav').toggleClass('navshow');
+});
 
+$(document).ready(function(){
+
+    $('.a').click(function(){
+        $('.navhide').toggleClass('navshow');
     })
 
 });

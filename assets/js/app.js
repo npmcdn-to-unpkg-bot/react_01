@@ -39,6 +39,24 @@ var Home = React.createClass({
 
             <section id ="splashscreen">
 
+                <h3>SUN, 2 OCT 2016 @ 19:00</h3>
+
+                <h1>Lagos Fitness & Wellness </h1>
+
+                <p>In life there will be road blocks but we will over come it A major key, never panic Give thanks to the most high Eliptical talk Egg whites, turkey sausage, wheat toast, water We the best To succeed you must believe They never said winning was easy Give thanks to the most high The key to more success is to have a lot of pillows Some people can’t handle success, I can A major key, never panic Special cloth alert Every chance I get, I water the plants, Lion! Eliptical talk.</p>
+
+                <h1>WHEN</h1>
+
+                <p>Wednesday, June 3, 2015 from 6:30 PM to 9:30 PM (BST)</p>
+
+                <h1>WHERE</h1>
+
+                <address>Method London - 56 Shoreditch High Street Studio 7.01 (Floor 7), London, E1 6JJ</address>
+
+                <a href="#">View Map</a>
+
+                <h1>FOLLOW US</h1>
+
             </section>
 
         );
@@ -186,9 +204,9 @@ var App = React.createClass({
                             <li className="menu"><Link to="/contact" activeClassName="active" className="a">Contact</Link></li>
                         </ul>
                     </nav>
-                    <a href="#" className="hidden" id="i-nav" onClick={toggleNav()}>Menu</a>
+                    <a className="hidden" id="i-nav">Menu</a>
                 </header>
-                <script type="text/javascript" src="js/custom-jquery.js"></script>
+
                 {/* All content will be loaded here*/}
                 <main>
                     {this.props.children}

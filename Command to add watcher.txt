@@ -1,3 +1,3 @@
-babel --watch es6.js --out-file app2.js
+babel --watch app.js --out-file app2.js
 
 npm install babel-cli babel-preset-es2015 --save
