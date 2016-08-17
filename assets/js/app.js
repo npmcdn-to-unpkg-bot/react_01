@@ -5,57 +5,29 @@ var { Router,
     Link } = ReactRouter;
 var Destination = document.querySelector("#container");
 
-var GoogleMap = React.createClass({
-    getDefaultProps: function () {
-        return {
-            initialZoom: 8,
-            mapCenterLat: 43.6425569,
-            mapCenterLng: -79.4073126,
-        };
-    },
-    componentDidMount: function (rootNode) {
-        var mapOptions = {
-                center: this.mapCenterLatLng(),
-                zoom: this.props.initialZoom
-            },
-            map = new google.maps.Map(this.refs.map, mapOptions);
-        var marker = new google.maps.Marker({position: this.mapCenterLatLng(), title: 'Hi', map: map});
-        this.setState({map: map});
-    },
-    mapCenterLatLng: function () {
-        var props = this.props;
-        return new google.maps.LatLng(props.mapCenterLat, props.mapCenterLng);
-    },
-    render: function () {
-        return (
-            <div className='map'></div>
-        );
-    }
-});
-
 var Home = React.createClass({
     render: function() {
         return (
 
             <section id ="splashscreen">
 
-                <h3>SUN, 2 OCT 2016 @ 19:00</h3>
+                <h6>SUN, 2 OCT 2016 @ 19:00</h6>
 
                 <h1>Lagos Fitness & Wellness </h1>
 
                 <p>In life there will be road blocks but we will over come it A major key, never panic Give thanks to the most high Eliptical talk Egg whites, turkey sausage, wheat toast, water We the best To succeed you must believe They never said winning was easy Give thanks to the most high The key to more success is to have a lot of pillows Some people can’t handle success, I can A major key, never panic Special cloth alert Every chance I get, I water the plants, Lion! Eliptical talk.</p>
 
-                <h1>WHEN</h1>
+                <h3>WHEN</h3>
 
                 <p>Wednesday, June 3, 2015 from 6:30 PM to 9:30 PM (BST)</p>
 
-                <h1>WHERE</h1>
+                <h3>WHERE</h3>
 
                 <address>Method London - 56 Shoreditch High Street Studio 7.01 (Floor 7), London, E1 6JJ</address>
 
                 <a href="#">View Map</a>
 
-                <h1>FOLLOW US</h1>
+                <h3>FOLLOW US</h3>
 
             </section>
 
@@ -70,7 +42,7 @@ var Contact = React.createClass({
             <section>
                 <h2>Contact Us</h2>
                 <p>The easiest thing to do is post on our <a href="http://forum.kirupa.com">forums</a>.</p>
-                <div id="map-canvas"></div>
+                <div id="map-canvas">s</div>
 
             </section>
 
@@ -128,7 +100,15 @@ var Register = React.createClass({
                         Womens Volly Ball <input type="checkbox" name="Interests" value="WVB" />
                     </fieldset>
 
-                    <input type="submit" value="Submit" />
+                    <fieldset>
+                        <legend>Add Image Profile</legend>
+                        <p>Click on the image to upload a profile pic:</p>
+                        <a href="#"><img src="img/user.ico" /></a>
+
+
+                    </fieldset>
+
+                    <input type="submit" value="Submit" style={{marginTop: '10px'}} className="btn btn-danger" />
                 </form>
             </section>
 
@@ -193,7 +173,7 @@ var App = React.createClass({
         return (
             <div id="wrapper">
                 <header>
-                    <h1 id="logo">Logo</h1>
+                    <Link to="/"><h1 id="logo">Logo</h1></Link>
                     <nav id="menunav" className="navhide">
                         <ul className="menu">
                             {/*using React Router's Link components that are similar to <a> tags but offer a lot more functionality*/}
@@ -204,7 +184,7 @@ var App = React.createClass({
                             <li className="menu"><Link to="/contact" activeClassName="active" className="a">Contact</Link></li>
                         </ul>
                     </nav>
-                    <a className="hidden" id="i-nav">Menu</a>
+                    <a className="hidden" id="i-nav"><i className="fa fa-bars" id="menuicon"></i> </a>
                 </header>
 
                 {/* All content will be loaded here*/}
@@ -212,7 +192,7 @@ var App = React.createClass({
                     {this.props.children}
                 </main>
 
-                <footer>This is the footer</footer>
+                <footer>Street Pas Events © 2016 All Rights Reserved. Website design by Renegare Dev</footer>
             </div>
 
         )

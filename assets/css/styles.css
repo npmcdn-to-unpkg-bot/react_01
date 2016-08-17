@@ -14,6 +14,10 @@
     height:100%;
 }
 
+h1,h2,h3,h4,h5,h6 {
+    font-weight: bold;
+}
+
 /* HEADER ------------------------------------------------------------------------- */
 #logo {
     float: left;
@@ -103,11 +107,11 @@ main {
 
 /* HOME SCREEN ------------ */
 #splashscreen{
-    padding:0px;
+    padding:50px;
     width: 100%;
-    height: 600px;
+    height: 100%;
     background: url('/img/dummy_image.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
+        -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
@@ -116,8 +120,13 @@ main {
 /* CONTACT SCREEN ------------ */
 
 #map-canvas {
-    height: 100%;
-    width: 100%;
+    background:#000000 url('/img/google-map.jpg') no-repeat center center fixed;
+    -webkit-background-size:462px 300px ;
+    -moz-background-size:462px 300px ;
+    -o-background-size:462px 300px ;
+    background-size:462px 300px ;
+    height: 300px;
+    width: 462px;
     margin:0px;
     padding:0px;
 }
@@ -127,9 +136,12 @@ main {
 
 footer {
     height:50px;
+    line-height: 50px;
     background: #545050;
     width: 100%;
     color: #ffffff;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 /* DEVICE SCREE SIZES ----------------------------------------------------------------------- */
 /* DEVICE SCREE SIZES ----------------------------------------------------------------------- */
@@ -153,6 +165,13 @@ footer {
     }
     /* MOBILE MENU ----------------------------------------------------------------------- */
     /* Hide nav options ----------*/
+    #menuicon{
+        font-size: 38px;
+        width: 100%;
+        height:100%;
+        line-height: 80px;
+    }
+
     .navhide {
 
         opacity: 0;
@@ -165,7 +184,7 @@ footer {
        transition: visibility 0.5s, opacity 0.5s linear;
        visibility: visible;
    }
-    nav {z-index: 2;position:absolute;}
+    nav {z-index: 2; position:absolute; !important;}
    #i-nav{
        display: block;
        position: absolute;
@@ -179,9 +198,10 @@ footer {
        text-align: center;
        font-family: "Arial Black";
    }
-   nav {z-index: 2;}
+
    ul.menu {
        width:100%;
+       border-bottom:#ccc solid 1px;
    }
    ul.menu li.menu{
        width:100%;
@@ -192,6 +212,7 @@ footer {
        text-align: center;
        padding:0px;
        margin-bottom: 1px;
+       border-bottom:#ccc solid 1px;
    }
     main {
         z-index: -1;
@@ -234,7 +255,7 @@ footer {
         transition: visibility 0.5s, opacity 0.5s linear;
         visibility: visible;
     }
-    nav {z-index: 2;position:absolute;}
+    nav {z-index: 2; position:absolute; !important;}
     #i-nav{
         display: block;
         position: absolute;
@@ -252,6 +273,7 @@ footer {
     ul.menu {
         width:100%;
         height:80px;
+        border-bottom:#ccc solid 1px;
     }
     ul.menu li.menu{
         width:100%;
@@ -266,6 +288,7 @@ footer {
         margin-bottom: 1px;
         line-height: 80px;
         height:80px;
+        border-bottom:#ccc solid 1px;
     }
     main {
         z-index: -1;
