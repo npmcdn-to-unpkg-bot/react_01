@@ -54,7 +54,7 @@ var Register = React.createClass({
         return (
             <section>
                 <h2>Register</h2>
-                <form action="">
+                <form name="RegisterForm" onsubmit="return validateTheForm()" method="" action="">
                     <fieldset>
                         <legend>Personal Details:</legend>
                         <p>Mauris sem velit, vehicula eget sodales vitae,
@@ -76,7 +76,7 @@ var Register = React.createClass({
 
                         DOB:<br/>
 
-                        <input className="datepicker" /><br/>
+                        <input type="date" /><br/>
 
                         Local Government:<br/>
                         <select name="Council">
@@ -103,12 +103,12 @@ var Register = React.createClass({
                     <fieldset>
                         <legend>Add Image Profile</legend>
                         <p>Click on the image to upload a profile pic:</p>
-                        <a href="#"><img src="img/user.ico" /></a>
+                        <a href="#"><img src="img/user.ico" id="userProfileImage" /></a>
 
 
                     </fieldset>
 
-                    <input type="submit" value="Submit" style={{marginTop: '10px'}} className="btn btn-danger" />
+                    <input type="submit" value="Submit" style={{marginTop: '10px'}} className="submitBtn" />
                 </form>
             </section>
 
